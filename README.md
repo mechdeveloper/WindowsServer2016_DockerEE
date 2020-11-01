@@ -119,3 +119,9 @@ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <con
 ```pwsh
 Invoke-WebRequest http://<containerip>:9080 -usebasicparsing
 ```
+
+### Deploy as a docker stack
+
+```pwsh
+docker stack deploy --compose-file docker-compose.yml test_iis_win2016
+```

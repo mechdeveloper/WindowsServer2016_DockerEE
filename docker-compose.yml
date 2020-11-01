@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  web:
+    image: mywebsite:latest
+    ports:
+      - mode: host
+        target: 80
+        published: 8080
+    deploy:
+      mode: global
+      endpoint_mode: dnsrr
+    networks:
+      - frontend
+
+networks:
+  frontend:
