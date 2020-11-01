@@ -123,5 +123,10 @@ Invoke-WebRequest http://<containerip>:9080 -usebasicparsing
 ### Deploy as a docker stack
 
 ```pwsh
+# initiate docker swarm
+docker swarm init
+```
+
+```pwsh
 docker stack deploy --compose-file docker-compose.yml test_iis_win2016
 ```
